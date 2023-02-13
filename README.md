@@ -46,10 +46,12 @@ sudo mkdir ${diretorio}
 sudo chown -R root:root ${diretorio}/*
 
 # Baixando e instalando o NodeJs
-sudo apt install npm -y
-sudo npm cache clean -f
-sudo npm install -g n
-sudo n stable
+# sudo apt install npm -y
+# sudo npm cache clean -f
+# sudo npm install -g n
+# sudo n stable
+sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt install nodejs
 
 # Configurando diretórios para os logs do supervisor
 sudo mkdir /logs
